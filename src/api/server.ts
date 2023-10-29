@@ -1,7 +1,7 @@
 
 const serverCalls = {
     signUp: async(data: any) =>{
-        const response = await fetch("http://127.0.0.1:5000/signup",{
+        const response = await fetch("https://yourmemes.onrender.com/signup",{
             method: "POST",
             headers:{
                 'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ const serverCalls = {
         return await response.json()
     },
     getTemps: async () =>{
-        const response = await fetch("http://127.0.0.1:5000/api/getTemps",{
+        const response = await fetch("https://yourmemes.onrender.com/api/getTemps",{
             method: "GET",
             headers:{
                 'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const serverCalls = {
         return await response.json()
     },
     getTemp: async (id: string) =>{
-        const response = await fetch(`http://127.0.0.1:5000/api/getTemp/${id}`,{
+        const response = await fetch(`https://yourmemes.onrender.com/api/getTemp/${id}`,{
             method: "GET",
             headers:{
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const serverCalls = {
         return await response.json()
     },
     getUserMemes: async (data: string) =>{
-        const response = await fetch("http://127.0.0.1:5000/api/getMemes",{
+        const response = await fetch("https://yourmemes.onrender.com/api/getMemes",{
             method: "GET",
             headers:{
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const serverCalls = {
         return await response.json()
     },
     getUserMeme: async (data: string, id: string) =>{
-        const response = await fetch(`http://127.0.0.1:5000/api/getMeme/${id}`,{
+        const response = await fetch(`https://yourmemes.onrender.com/api/getMeme/${id}`,{
             method: "GET",
             headers:{
                 'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const serverCalls = {
         return await response.json()
     },
     addUserMeme: async (data: any) =>{
-        const response = await fetch("http://127.0.0.1:5000/api/addMeme",{
+        const response = await fetch("https://yourmemes.onrender.com/api/addMeme",{
             method: "POST",
             headers:{
                 'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const serverCalls = {
         return await response.json()
     },
     updateMeme: async (data: any) =>{
-        const response = await fetch(`http://127.0.0.1:5000/api/updateMeme/${data.memeid}`,{
+        const response = await fetch(`https://yourmemes.onrender.com/api/updateMeme/${data.memeid}`,{
             method: "PUT",
             headers:{
                 'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const serverCalls = {
         return await response.json()
     },
     deleteMeme: async (token: string, id:string) =>{
-        const response = await fetch(`http://127.0.0.1:5000/api/deleteMeme/${id}`,{
+        const response = await fetch(`https://yourmemes.onrender.com/api/deleteMeme/${id}`,{
             method: "DELETE",
             headers:{
                 'Content-Type': 'application/json',
