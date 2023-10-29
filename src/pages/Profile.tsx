@@ -16,7 +16,7 @@ const Profile = () => {
     <>
         <div className="flex mt-12 grow justify-center">
             <div>
-                <h1 className="text-4xl font-bold ">Here is your Meme Collection!</h1>
+                <h1 className="text-4xl font-bold ">Here is your Meme Collection! Click on a meme to update or delete it!</h1>
             </div>
         </div>
         <div className="flex grow justify-center">
