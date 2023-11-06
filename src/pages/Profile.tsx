@@ -11,7 +11,6 @@ interface meme{
 const Profile = () => {
   const {memeData, getMemes} = useGetMemes()
   getMemes
-  console.log(memeData)
   return (
     <>
         <div className="flex mt-12 grow justify-center">
@@ -22,7 +21,6 @@ const Profile = () => {
         <div className="flex grow justify-center">
             <div className="grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1">
                 {memeData.map((meme: meme) =>{
-                  console.log(meme.img_src)
                     return(<Meme imgSrc={meme.img_src} caption={meme.caption} id={meme.id} uid={meme.user_token} size={"w-80"}/>)
                 }
                 )}

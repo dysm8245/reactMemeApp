@@ -16,14 +16,6 @@ const Navbar = () => {
     const handleOpen = () => {
         setOpen(!open)
     }
-    const signIn = async () =>{
-        // console.log(auth.currentUser)
-        if(auth.currentUser == null){
-            await signInWithPopup(auth, provider)
-            navigate("/")
-        }
-        navigate("/")
-    }
 
     const signUp = async () =>{
         // console.log(auth.currentUser)
@@ -37,13 +29,12 @@ const Navbar = () => {
                 "token": user.uid
             }
             serverCalls.signUp(userInfo)
-            .then((result) =>{
-                console.log(result)
+            .then(() =>{
+                console.log("user signed up")
             })
             .catch(() =>{
                 console.log("Already have an account")
             })
-            console.log(userInfo)
             navigate("/")
         }
         navigate("/")
@@ -70,10 +61,7 @@ const Navbar = () => {
                     {user == null?(
                         <>
                             <li className="hover:text-white">
-                                <button onClick={signIn}>Sign-In</button>
-                            </li>
-                            <li className="hover:text-white">
-                                <button onClick={signUp}>Sign-Up</button>
+                                <button onClick={signUp}>Sign-In</button>
                             </li>
                         </>
                     ):(
@@ -104,10 +92,7 @@ const Navbar = () => {
                     {user == null?(
                         <>
                             <div className="flex w-32 border border-black bg-green-300 justify-center rounded-lg">
-                                <button onClick={signIn}>Sign-In</button>
-                            </div>
-                            <div className="flex w-32 border border-black bg-green-300 justify-center rounded-lg">
-                                <button onClick={signUp}>Sign-Up</button>
+                                <button onClick={signUp}>Sign-In</button>
                             </div>
                         </>
                     ):(

@@ -11,7 +11,6 @@ const useGetMemes = () =>{
     if(user){
         console.log("user")
     }
-    console.log(userInfo.uid)
     const handleGetData = async () =>{
         const data = await serverCalls.getUserMemes(userInfo.uid)
         setMemeData(data)
