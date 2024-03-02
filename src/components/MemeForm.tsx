@@ -28,8 +28,6 @@ const MemeForm = (props: formProps) => {
             navigate("/profile")
         }
         else{
-            console.log(store.getState().meme.id)
-            console.log(store.getState().meme.caption)
             const update: Object = {
                 img_src: store.getState().meme.img_src,
                 memeid: store.getState().meme.id,

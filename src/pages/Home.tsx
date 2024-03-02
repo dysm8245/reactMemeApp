@@ -6,8 +6,8 @@ const Home = () => {
   const userInfo: any = user
   return (
     <>
-        <div className="flex mt-12 grow justify-center">
-            <div>
+        <div className="flex grow justify-center">
+            <div className="mt-12">
               {user == null?(
                 <>
                  <h1 className="text-4xl font-bold ">Welcome to the meme Generating website!</h1>

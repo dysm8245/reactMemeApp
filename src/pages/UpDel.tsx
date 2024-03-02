@@ -26,8 +26,8 @@ const UpDel = () => {
 
 
   return (
-    <div className="flex mt-12 grow justify-center">
-      <div className="grid grid-cols-1">
+    <div className="flex grow justify-center">
+      <div className="grid grid-cols-1 mt-12">
         {/* <div className="flex grow justify-center"> */}
           <Meme imgSrc={store.getState().meme.img_src} caption={store.getState().meme.caption} uid={"yes"} size={"w-96"}/>
         {/* </div> */}

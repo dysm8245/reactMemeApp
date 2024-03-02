@@ -13,8 +13,8 @@ const Memes = () => {
     
   return (
     <>
-        <div className="flex mt-12 grow justify-center">
-            <div>
+        <div className="flex grow justify-center">
+            <div className="mt-12">
                 <h1 className="text-4xl font-bold ">Pick a meme template to make a Meme!</h1>
             </div>
         </div>
@@ -29,5 +29,5 @@ const Memes = () => {
     </>
   )
 }
-// grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1
+
 export default Memes

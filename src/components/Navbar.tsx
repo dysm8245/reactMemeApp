@@ -50,45 +50,45 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="flex grow h-12 bg-gradient-to-r from-green-300 from-0% to-orange-300 to-100%">
-            <div className="flex justify-start items-center grow">
+        <nav className="fixed w-full h-12 bg-gradient-to-r from-green-300 from-0% to-orange-300 to-100%">
+            <div className="flex h-full justify-start items-center grow">
                 <h1 className="mx-16 font-bold">
                     Meme Generator
                 </h1>
-            </div>
-            <div className="hidden md:block justify-end items-center mt-3 mr-2">
-                <ul className="inline-flex space-x-5">
-                    {user == null?(
-                        <>
-                            <li className="hover:text-white">
-                                <button onClick={signUp}>Sign-In</button>
-                            </li>
-                        </>
-                    ):(
-                        <>
-                            <li className="hover:text-white">
-                                <a href="/">Home</a>
-                            </li>
-                            <li className="hover:text-white">
-                                <a href="/memes">Memes</a>
-                            </li>
-                            <li className="hover:text-white">
-                                <a href="/profile">Profile</a>
-                            </li>
-                            <li className="hover:text-white">
-                                <button onClick={logOut}>Sign-Out</button>
-                            </li>
-                        </>
-                    )}
-                </ul>
-            </div>
-            <div className="flex md:hidden justify-end items-center mr-2">
-                <button onClick={handleOpen} className="w-5 h-5"><i className="fa-solid fa-bars"></i></button>
+                <div className="hidden md:flex grow justify-end items-center mr-2">
+                    <ul className="inline-flex space-x-5">
+                        {user == null?(
+                            <>
+                                <li className="hover:text-white">
+                                    <button onClick={signUp}>Sign-In</button>
+                                </li>
+                            </>
+                        ):(
+                            <>
+                                <li className="hover:text-white">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li className="hover:text-white">
+                                    <a href="/memes">Memes</a>
+                                </li>
+                                <li className="hover:text-white">
+                                    <a href="/profile">Profile</a>
+                                </li>
+                                <li className="hover:text-white">
+                                    <button onClick={logOut}>Sign-Out</button>
+                                </li>
+                            </>
+                        )}
+                    </ul>
+                </div>
+                <div className="flex md:hidden grow justify-end items-center mr-2">
+                    <button onClick={handleOpen} className="w-5 h-5"><i className="fa-solid fa-bars"></i></button>
+                </div>
             </div>
         </nav>
         {open?(
             <div className="flex grow justify-end">
-                <div className="grid grid-cols-1 md:hidden absolute">
+                <div className="grid grid-cols-1 md:hidden fixed mt-12">
                     {user == null?(
                         <>
                             <div className="flex w-32 border border-black bg-green-300 justify-center rounded-lg">

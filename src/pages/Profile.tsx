@@ -13,8 +13,8 @@ const Profile = () => {
   getMemes
   return (
     <>
-        <div className="flex mt-12 grow justify-center">
-            <div>
+        <div className="flex grow justify-center">
+            <div className="mt-12">
                 <h1 className="text-4xl font-bold ">Here is your Meme Collection! Click on a meme to update or delete it!</h1>
             </div>
         </div>
