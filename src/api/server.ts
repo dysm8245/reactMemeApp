@@ -1,8 +1,8 @@
 
 const serverCalls = {
     getServer: async() =>{
-        const response = await fetch("https://yourmemes.onrender.com/api/")
-        return await response.json()
+        const response = fetch("https://yourmemes.onrender.com/api/")
+        return response
     },
     signUp: async(data: any) =>{
         const response = await fetch("https://yourmemes.onrender.com/signup",{
